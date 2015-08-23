@@ -8,7 +8,7 @@
 
 > <%= moduleDesc %>
 
-## Install
+## Installk
 
 ```sh
 npm i -D <%= moduleName %>
@@ -17,7 +17,7 @@ npm i -D <%= moduleName %>
 ## Usage
 
 ```js
-import <%= camelModuleName %> from '<%= moduleName %>'
+import <%= camelModuleName %> from "<%= moduleName %>"
 
 <%= camelModuleName %>() // true
 ```

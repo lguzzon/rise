@@ -1,0 +1,68 @@
+{
+  "name": "generator-rise",
+  "version": "1.0.0",
+  "description": "Node module template for authoring with ES6+, Babel, Tape and npm scripts",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "https://github.com/bucaran/generator-rise",
+  "author": {
+    "name": "Jorge Bucaran",
+    "email": "jbucaran@me.com",
+    "url": "https://github.com/bucaran"
+  },
+  "scripts": {
+    "test": "babel-node test/*.js | tspec",
+    "coverage": "babel-node node_modules/.bin/isparta cover --report text test/*.js",
+    "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf ./coverage",
+    "deploy": "git pull -q --rebase origin master && git push -q origin master"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "boilerplate",
+    "es6",
+    "es2015",
+    "node",
+    "starter",
+    "kit",
+    "transpile",
+    "6to5",
+    "babel",
+    "yeoman",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "module",
+    "node_module",
+    "node-module",
+    "tape",
+    "tap",
+    "coveralls",
+    "coveralls.io",
+    "travis",
+    "javascript",
+    "cli",
+    "npm",
+    "npm scripts",
+    "productivity"
+  ],
+  "dependencies": {
+    "camelcase": "*",
+    "humanize-url": "*",
+    "normalize-url": "*",
+    "slug": "*",
+    "yeoman-generator": "*",
+    "yosay": "*"
+  },
+  "devDependencies": {
+    "tape": "*",
+    "babel": "*",
+    "coveralls": "*",
+    "isparta": "*",
+    "rimraf": "*",
+    "tap-spec": "*"
+  }
+}

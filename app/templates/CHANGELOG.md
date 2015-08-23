@@ -1,0 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Contents
+
+- [Changelog](#changelog)
+  - [v1.0.0](#v100)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Changelog
+
+ * [1.0.0](v100)
+
+### v1.0.0
+
+ * <%= moduleName %> initial commit.

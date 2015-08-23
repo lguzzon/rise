@@ -19,7 +19,7 @@
 * [Lint](http://stackoverflow.com/questions/8503559/what-is-linting) with [ESLint](http://eslint.org/)
 * [Tests](http://programmers.stackexchange.com/questions/135218/what-is-the-difference-between-writing-test-cases-for-bdd-and-tdd) with [tape][tape] in ES6
 * [Travis CI](http://docs.travis-ci.com/user/languages/javascript-with-nodejs/) and [Coveralls](https://coveralls.io) ready
-* Productivity   [scripts](https://github.com/bucaran/generator-rise/blob/master/package.json#L13) :horse_racing:
+* Productivity   [scripts](https://github.com/bucaran/generator-rise/blob/master/app/templates/package.json#L11) :horse_racing:
 * [Shields.io](http://shields.io/) badges
 
 ## Install

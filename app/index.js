@@ -1,0 +1,76 @@
+const yo = require("yosay")
+const yeoman = require("yeoman-generator")
+const slugify = require("slug")
+const camelify = require("camelcase")
+const normalize = require("normalize-url")
+const humanize = require("humanize-url");
+
+module.exports = yeoman.generators.Base.extend({
+  init: function () {
+    const done = this.async()
+
+    this.log(yo("☭ Rise: A generator for the people by the people."))
+    this.prompt([
+      {
+        name: "githubUserName",
+        message: "☭ What is your GitHub user name?",
+        store: true,
+        validate: function (value) {
+          return value.length > 0 ? true : "github needed"
+        }
+      },
+      {
+        name: "moduleKeywords",
+        message: "☭ Keywords?",
+        default: "node"
+      },
+      {
+        name: "website",
+        message: "☭ What is your website URL?",
+        store: true,
+        filter: function (s) { return normalize(s) },
+        default: function (props) {
+          return "http://github.com/" + props.githubUserName
+        }
+      },
+      {
+        name: "moduleName",
+        message: "☭ What is the module name?",
+        filter: function (s) { return slugify(s) },
+        default: require("path").basename(process.cwd()).replace(/\s/g, "-")
+      },
+      {
+        name: "moduleDesc",
+        message: "☭ What is the module description?",
+        default: function (props) { return props.name }
+      }
+    ],
+      function (props) {
+        this.moduleName = props.moduleName
+        this.moduleDesc = props.moduleDesc
+        this.camelModuleName = camelify(props.moduleName)
+        this.moduleKeywords = props.moduleKeywords.trim().split(",")
+          .map(function(s) { return (s || "").trim() })
+
+        this.githubUsername = props.githubUsername
+        this.name = this.user.git.name()
+        this.email = this.user.git.email()
+        this.website = props.website
+        this.humanizedWebsite = humanize(props.website)
+
+        this.template("package.json")
+        this.template("README.md")
+        this.template("LICENSE")
+        this.template("CHANGELOG.md")
+        this.template("index.js",      "src/index.js")
+        this.template("test.js",       "test/index.js")
+        this.template("editorconfig",  ".editorconfig")
+        this.template("gitignore",     ".gitignore")
+        this.template("travis.yml",    ".travis.yml")
+        this.template("eslintrc",      ".eslintrc")
+
+        done()
+    }.bind(this))
+  },
+  install: function () { this.installDependencies({ bower: false }) }
+})

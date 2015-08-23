@@ -1,0 +1,57 @@
+{
+  "name": "<%= moduleName %>",
+  "version": "1.0.0",
+  "description": "<%= moduleDesc %>",
+  "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src test",
+    "check": "npm run lint -s && dependency-check package.json --entry src",
+    "test": "babel-node test/*.js | tspec",
+    "prebuild": "npm run check -s && npm run clean -s",
+    "build": "babel --optional runtime src -d dist",
+    "postbuild": "npm run test -s",
+    "coverage": "babel-node node_modules/.bin/isparta cover --report text test/*.js",
+    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
+    "postcoveralls": "rimraf ./coverage",
+    "prepublish": "npm run build -s",
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= githubUsername %>/<%= moduleName %>.git"
+  },
+  "keywords": [
+    <% moduleKeywords.forEach(function(keyword, i, arr) { %>"<%= keyword %>"<% if (i !== arr.length - 1) { %>,
+    <% } %><% }); %>
+  ],
+  "author": "<%= name %> <<%= email %>>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
+  },
+  "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
+  "devDependencies": {
+    "eslint": "*",
+    "babel-eslint": "*",
+    "babel": "*",
+    "coveralls": "*",
+    "isparta": "*",
+    "tape": "*",
+    "tap-spec": "*",
+    "rimraf": "*",
+    "dependency-check": "*"
+  },
+  "dependencies": {
+    "babel-runtime": "*"
+  }
+}

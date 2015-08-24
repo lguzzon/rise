@@ -25,7 +25,7 @@
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
     "postpublish": "git push origin master --follow-tags",
-    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md",
+    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,7 @@
     "rimraf": "*",
     "dependency-check": "*",
     "watch": "*",
-    "doctoc": "*",
+    "doctoc": "*"
   },
   "dependencies": {
     "babel-runtime": "*"

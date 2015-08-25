@@ -41,9 +41,13 @@ Scaffold out a node module with <a href="https://github.com/lukehoban/es6feature
   </a>
 </p>
 
+# Install
+
+```
+npm i -g generator-rise
+```
 
 # ☭ Features
-> See [notes](#beginner-notes) for suggested workflows.
 
 * [Babel](https://babeljs.io) :point_up:
 * [Lint](http://stackoverflow.com/questions/8503559/what-is-linting) with [ESLint](http://eslint.org/)
@@ -54,22 +58,14 @@ Scaffold out a node module with <a href="https://github.com/lukehoban/es6feature
 * Automatic TOC with [tocdoc](https://github.com/thlorenz/doctoc)
 * Badges with [![][shields]](http://shields.io/)
 * Option to center title and badges in README.
+* Simple [workflow](#beginner-workflow).
 * [Example][example]
 
-
-
-## Install
-
-```
-npm i -g generator-rise
-```
-
-## Usage
+# Usage
 > You need [Yeoman](http://yeoman.io/) to run this command.
 
 ```
 yo rise
-
 → create package.json
 → create README.md
 → create LICENSE
@@ -82,7 +78,7 @@ yo rise
 → create .eslintrc
 ```
 
-## :beginner: Notes
+# :beginner: Workflow
 
 * Add code to `src/index.js` and tests to `test/index.js`.
 
@@ -100,10 +96,7 @@ yo rise
 
 * Bump version and publish a package with `npm run major` or `minor/patch`
 
-* Do not forget to enable [Travis](https://travis-ci.org/) and [Coveralls](coveralls.io).
-
-
-## License
+# License
 
 MIT © [Jorge Bucaran][author]
 

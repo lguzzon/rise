@@ -65,7 +65,8 @@ module.exports = Yeoman.generators.Base.extend({
         this.website = props.website
         this.humanizedWebsite = humanize(props.website)
 
-        this.template(props.center ? "README.md" : "README-2.md")
+        this.template(props.center
+          ? "README.md" : "README-2.md", "README.md")
         this.template("package.json")
         this.template("LICENSE")
         this.template("CHANGELOG.md")

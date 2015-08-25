@@ -1,19 +1,19 @@
-const yo = require("yosay")
-const yeoman = require("yeoman-generator")
-const slugify = require("slug")
-const camelify = require("camelcase")
+const Yeoman = require("yeoman-generator")
+const yosay = require("yosay")
+const slug = require("slug")
+const camel = require("camelcase")
 const normalize = require("normalize-url")
 const humanize = require("humanize-url");
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = Yeoman.generators.Base.extend({
   init: function () {
     const done = this.async()
 
-    this.log(yo("☭ Rise: A generator for the people by the people."))
+    this.log(yosay("☭ Rise: A generator for the people by the people."))
     this.prompt([
       {
         name: "githubUserName",
-        message: "☭ What is your GitHub user name?",
+        message: "What is your GitHub user name?",
         store: true,
         validate: function (value) {
           return value.length > 0 ? true : "github needed"
@@ -21,12 +21,12 @@ module.exports = yeoman.generators.Base.extend({
       },
       {
         name: "moduleKeywords",
-        message: "☭ Keywords?",
+        message: "Keywords?",
         default: "node"
       },
       {
         name: "website",
-        message: "☭ What is your website URL?",
+        message: "What is your website URL?",
         store: true,
         filter: function (s) { return normalize(s) },
         default: function (props) {
@@ -35,20 +35,27 @@ module.exports = yeoman.generators.Base.extend({
       },
       {
         name: "moduleName",
-        message: "☭ What is the module name?",
-        filter: function (s) { return slugify(s) },
+        message: "What is the module name?",
+        filter: function (s) { return slug(s) },
         default: require("path").basename(process.cwd()).replace(/\s/g, "-")
       },
       {
         name: "moduleDesc",
-        message: "☭ What is the module description?",
+        message: "What is the module description?",
         default: function (props) { return props.name }
+      },
+      {
+        type: "confirm",
+        name: "center",
+        message: "Center title and badges in README?",
+        store: true,
+        default: false
       }
     ],
       function (props) {
         this.moduleName = props.moduleName
         this.moduleDesc = props.moduleDesc
-        this.camelModuleName = camelify(props.moduleName)
+        this.camelModuleName = camel(props.moduleName)
         this.moduleKeywords = props.moduleKeywords.trim().split(",")
           .map(function(s) { return (s || "").trim() })
 
@@ -58,8 +65,8 @@ module.exports = yeoman.generators.Base.extend({
         this.website = props.website
         this.humanizedWebsite = humanize(props.website)
 
+        this.template(props.center ? "README.md" : "README-2.md")
         this.template("package.json")
-        this.template("README.md")
         this.template("LICENSE")
         this.template("CHANGELOG.md")
         this.template("index.js",      "src/index.js")

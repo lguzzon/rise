@@ -5,13 +5,42 @@
 </div>
 <br>
 
-> Scaffold out a node module with [ES6][es6]+, [Babel][babel], [tape][tape] and [npm scripts][npm-scripts].
+<p align="center"><big>
+Scaffold out a node module with [ES6][es6]+, [Babel][babel], [tape][tape] and [npm scripts][npm-scripts]
+</big></p>
 
-[![NPM version][npm-badge]][npm-url]
-[![Coveralls Status][coveralls-badge]][coveralls-url]
-[![Build Status][travis-badge]][travis-url]
-[![Download Status][download-badge]][npm-url]
-[![Dependency Status][dep-badge]][dep-url]
+<p align="center">
+  <a href="https://npmjs.org/package/generator-rise">
+    <img src="https://img.shields.io/npm/v/generator-rise.svg?style=flat-square"
+         alt="NPM Version">
+  </a>
+
+  <a href="https://coveralls.io/r/bucaran/generator-rise">
+    <img src="https://img.shields.io/coveralls/bucaran/generator-rise.svg?style=flat-square"
+         alt="Coverage Status">
+  </a>
+
+  <a href="https://travis-ci.org/bucaran/generator-rise">
+    <img src="https://img.shields.io/travis/bucaran/generator-rise.svg?style=flat-square"
+         alt="Build Status">
+  </a>
+
+  <a href="https://npmjs.org/package/generator-rise">
+    <img src="http://img.shields.io/npm/dm/generator-rise.svg?style=flat-square"
+         alt="Downloads">
+  </a>
+
+  <a href="https://david-dm.org/bucaran/generator-rise.svg">
+    <img src="https://david-dm.org/bucaran/generator-rise.svg?style=flat-square"
+         alt="Dependency Status">
+  </a>
+
+  <a href="https://github.com/bucaran/generator-rise/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/generator-rise.svg?style=flat-square"
+         alt="License">
+  </a>
+</p>
+
 
 # ☭ Features
 > See [notes](#beginner-notes) for suggested workflows.
@@ -23,7 +52,8 @@
 * Productivity   [scripts](https://github.com/bucaran/generator-rise/blob/master/app/templates/package.json#L11) and source [watcher](https://github.com/mikeal/watch)
 * [Check](https://github.com/maxogden/dependency-check) `package` dependencies
 * Automatic TOC with [tocdoc](https://github.com/thlorenz/doctoc)
-* Badges with [![][bare-badge]](http://shields.io/)
+* Badges with [![][shields]](http://shields.io/)
+* Option to center title and badges in README.
 * [Example][example]
 
 
@@ -54,8 +84,6 @@ yo rise
 
 ## :beginner: Notes
 
-* Dependencies are automatically installed.
-
 * Add code to `src/index.js` and tests to `test/index.js`.
 
 * Lint, build and test a project with `npm run build`.
@@ -79,27 +107,10 @@ yo rise
 
 MIT © [Jorge Bucaran][author]
 
-[author]: https://github.com/bucaran
-
-[npm-url]: https://npmjs.org/package/generator-rise
-[npm-badge]: https://img.shields.io/npm/v/generator-rise.svg?style=flat-square
-
-[coveralls-url]: https://coveralls.io/r/bucaran/generator-rise
-[coveralls-badge]: https://img.shields.io/coveralls/bucaran/generator-rise.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/bucaran/generator-rise
-[travis-badge]: https://img.shields.io/travis/bucaran/generator-rise.svg?style=flat-square
-
-[dep-url]: https://david-dm.org/bucaran/generator-rise
-[dep-badge]: https://david-dm.org/bucaran/generator-rise.svg?style=flat-square
-
-[download-badge]: http://img.shields.io/npm/dm/generator-rise.svg?style=flat-square
-
-[babel]: https://babeljs.io
-[tape]: https://github.com/substack/tape
+[author]:      https://github.com/bucaran
+[babel]:       https://babeljs.io
+[tape]:        https://github.com/substack/tape
 [npm-scripts]: https://docs.npmjs.com/misc/scripts
-[es6]: https://github.com/lukehoban/es6features
-
-[bare-badge]: https://img.shields.io/badge/shields-io-FF3399.svg?style=flat-square
-
-[example]: https://github.com/bucaran/example-rise
+[es6]:         https://github.com/lukehoban/es6features
+[shields]:     https://img.shields.io/badge/shields-io-FF3399.svg?style=flat-square
+[example]:     https://github.com/bucaran/example-rise

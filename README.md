@@ -6,7 +6,7 @@
 <br>
 
 <p align="center"><big>
-Scaffold out a node module with [ES6][es6]+, [Babel][babel], [tape][tape] and [npm scripts][npm-scripts]
+Scaffold out a node module with <a href="https://github.com/lukehoban/es6features">ES6</a>+, <a href="https://babeljs.io">Babel</a>, <a href="https://github.com/substack/tape">tape</a> and <a href="https://docs.npmjs.com/misc/scripts">npm scripts</a>
 </big></p>
 
 <p align="center">
@@ -45,7 +45,7 @@ Scaffold out a node module with [ES6][es6]+, [Babel][babel], [tape][tape] and [n
 # ☭ Features
 > See [notes](#beginner-notes) for suggested workflows.
 
-* [Babel][babel] :point_up:
+* [Babel](https://babeljs.io) :point_up:
 * [Lint](http://stackoverflow.com/questions/8503559/what-is-linting) with [ESLint](http://eslint.org/)
 * [Tests](http://programmers.stackexchange.com/questions/135218/what-is-the-difference-between-writing-test-cases-for-bdd-and-tdd) with [tape][tape] in ES6
 * [Travis CI](http://docs.travis-ci.com/user/languages/javascript-with-nodejs/) and [Coveralls](https://coveralls.io)
@@ -107,10 +107,7 @@ yo rise
 
 MIT © [Jorge Bucaran][author]
 
-[author]:      https://github.com/bucaran
-[babel]:       https://babeljs.io
-[tape]:        https://github.com/substack/tape
-[npm-scripts]: https://docs.npmjs.com/misc/scripts
-[es6]:         https://github.com/lukehoban/es6features
-[shields]:     https://img.shields.io/badge/shields-io-FF3399.svg?style=flat-square
-[example]:     https://github.com/bucaran/example-rise
+[author]:  https://github.com/bucaran
+[tape]:    https://github.com/substack/tape
+[shields]: https://img.shields.io/badge/shields-io-FF3399.svg?style=flat-square
+[example]: https://github.com/bucaran/example-rise

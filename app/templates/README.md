@@ -8,7 +8,7 @@
 
 > <%= moduleDesc %>
 
-## Installk
+## Install
 
 ```sh
 npm i -D <%= moduleName %>

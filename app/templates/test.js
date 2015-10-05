@@ -1,5 +1,5 @@
 import test from "tape"
-import <%= camelModuleName %> from "../"
+import <%= camelModuleName %> from "../src"
 
 test("<%= camelModuleName %>", (t) => {
   t.plan(1)

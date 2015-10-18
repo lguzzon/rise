@@ -1,6 +1,6 @@
 <div align="center">
   <a href="http://git.io/rise">
-    <img width=14% src="https://cloud.githubusercontent.com/assets/8317250/10445523/e3a54c32-71ae-11e5-853b-09cab4f90dea.png">
+    <img width=20% src="https://github-cloud.s3.amazonaws.com/assets/8317250/10565356/797bccdc-7609-11e5-98ed-c77e566ca647.png">
   </a>
 </div>
 <br>

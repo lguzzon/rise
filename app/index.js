@@ -12,7 +12,7 @@ module.exports = Yeoman.generators.Base.extend({
     this.log(yosay("☭ Rise: A generator for the people by the people."))
     this.prompt([
       {
-        name: "githubUserName",
+        name: "githubUsername",
         message: "What is your GitHub user name?",
         store: true,
         validate: function (value) {
@@ -30,7 +30,7 @@ module.exports = Yeoman.generators.Base.extend({
         store: true,
         filter: function (s) { return normalize(s) },
         default: function (props) {
-          return "http://github.com/" + props.githubUserName
+          return "http://github.com/" + props.githubUsername
         }
       },
       {

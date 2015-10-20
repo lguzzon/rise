@@ -74,11 +74,17 @@ module.exports = Yeoman.generators.Base.extend({
         this.template("test.js",       "test/index.js")
         this.template("editorconfig",  ".editorconfig")
         this.template("gitignore",     ".gitignore")
-        this.template("travis.yml",    ".travis.yml")
         this.template("eslintrc",      ".eslintrc")
 
         done()
     }.bind(this))
+  },
+  writing: function () {
+    this.composeWith('travis', { options: {
+      config: { after_script: ['npm run coveralls'] }
+    }}, {
+      local: require.resolve('generator-travis/generators/app')
+    })
   },
   install: function () { this.installDependencies({ bower: false }) }
 })

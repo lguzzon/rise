@@ -11,8 +11,8 @@
     "url": "https://github.com/bucaran"
   },
   "scripts": {
-    "test": "babel-node test/*.js | tspec",
-    "coverage": "babel-node node_modules/.bin/isparta cover --report text test/*.js",
+    "test": "babel-node test/index.js | tspec",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover --report text test/index.js",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf ./coverage",
     "deploy": "git pull -q --rebase origin master && git push -q origin master"
   },

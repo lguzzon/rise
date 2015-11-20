@@ -1,6 +1,6 @@
 {
   "name": "generator-rise",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Node module template for authoring with ES6+, Babel, Tape and npm scripts",
   "license": "MIT",
   "main": "app/index.js",

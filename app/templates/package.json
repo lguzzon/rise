@@ -44,7 +44,6 @@
   "devDependencies": {
     "eslint": "*",
     "babel-eslint": "*",
-    "babel": "*",
     "coveralls": "*",
     "isparta": "*",
     "tape": "*",
@@ -53,8 +52,5 @@
     "dependency-check": "*",
     "watch": "*",
     "doctoc": "*"
-  },
-  "dependencies": {
-    "babel-runtime": "*"
   }
 }

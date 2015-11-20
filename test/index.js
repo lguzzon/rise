@@ -18,6 +18,7 @@ helpers.run(join(__dirname, "../app"))
       ".gitignore",
       ".travis.yml",
       ".editorconfig",
+      ".git"
     ])
     test("☭ generator-rise:app", (t) => {
       t.ok(true, "generate template files")

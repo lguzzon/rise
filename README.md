@@ -41,6 +41,8 @@ Scaffold out a node module with <a href="https://github.com/lukehoban/es6feature
   </a>
 </p>
 
+> :warning: This module is not actively maintained! Let me know if you'd be interested in helping out.
+
 # Install
 
 ```

@@ -61,12 +61,21 @@
     "yosay": "^1.2.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-preset-es2015": "^6.22.0",
     "coveralls": "^2.11.15",
     "nyc": "^10.1.2",
     "rimraf": "^2.5.4",
+=======
+    "babel-cli": "^6.1.2",
+    "babel-core": "^6.1.2",
+    "babel-preset-latest": "^6.22.0",
+    "coveralls": "^2.11.4",
+    "nyc": "^8.1.0",
+    "rimraf": "^2.4.4",
+>>>>>>> upstream/master
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
   }
